@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Primary Meta Tags -->
+<title>KMK miniproject</title>
+<link rel="icon" href="img/logo.png" type="image/icon type">
+<meta name="title" content="KMK miniproject">
+<meta name="description" content="Testing for website">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://mms-it.com/">
+<meta property="og:title" content="KMK miniproject">
+<meta property="og:description" content="Testing for website">
+<meta property="og:image" content="img/logo.png">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="https://mms-it.com/">
+<meta property="twitter:title" content="KMK miniproject">
+<meta property="twitter:description" content="Testing for website">
+<meta property="twitter:image" content="img/logo.png">
+
+  <title>Exchange Calculator</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/animate_it/animate.min.css">
+  <link rel="stylesheet" href="vendor/fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/nightmood.css">
+
+</head>
+<body class="night-mode">
+  <section class="app animate__animated animate__slideInDown">
+
+    <div class="output ">
+
+      <div class="brand-container">
+        <img src="img/logo.svg/logo-shape.svg" class="logo" alt="">
+        <P class="brand">MMEx</P>
+      </div>
+
+      <div class="result-container">
+        <p class="result" id="result">0.00</p>
+      </div>
+
+    </div>
+
+    <div class="divider "></div>
+
+    <form class="calc " id="calc">
+      <div class="input-container container">
+        <label>input</label>
+        <input type="number" class="input" id="input" placeholder="0.00" autofocus required>
+      </div>
+      <div class="from-container container">
+        <label>from</label>
+        <select id="from" class="from" onchange="test()" required>
+          <option value="">Selcect Currency</option>
+        </select>
+      </div>
+      <div class="to-container container">
+        <label>to</label>
+        <select  id="to" class="to" required></select>
+      </div>
+      <div class="calculate-container container">
+        <button class="calc-btn" id="calcbtn">Calculate</button>
+      </div>
+    </form>
+
+    <div class="history-container animate__animated animate__slideInDown">
+      <table class="history">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>From</th>
+            <th>To</th>
+            <th>Result</th>
+          </tr>
+        </thead>
+        <tbody id="historyList">
+          
+        </tbody>
+      </table>
+    </div>
+
+    
+  </section>
+
+  <button class="mode-change animate__animated animate__slideInUp" onclick="changeMode()">
+    <i class="fa-solid fa-moon" id="modeIcon"></i>
+  </button>
+
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
